@@ -1,0 +1,82 @@
+/* COLORS: change them here and the whole site updates */
+:root {
+  --bg: #f3f5f6;
+  --surface: #ffffff;
+  --ink: #1f2a33;
+  --muted: #5d6b75;
+  --accent: #3f6f73;
+  --line: #d6dee1;
+  --mist: #e4ebed;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Figtree", "Segoe UI", system-ui, sans-serif;
+  font-size: 1.05rem; line-height: 1.65;
+}
+h1, h2, h3 { font-family: "Newsreader", Georgia, serif; font-weight: 500; line-height: 1.2; margin: 0 0 .6rem; }
+h1 { font-size: clamp(2.6rem, 7vw, 4.2rem); }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+p { max-width: 62ch; }
+
+/* HEADER */
+.site-header {
+  position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center;
+  padding: .9rem clamp(1rem, 5vw, 4rem); background: rgba(243,245,246,.94);
+  backdrop-filter: blur(6px); border-bottom: 1px solid var(--line);
+}
+.brand { font-family: "Newsreader", Georgia, serif; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+.nav-links a { margin-left: 1.6rem; color: var(--muted); text-decoration: none; }
+.nav-links a:hover { color: var(--ink); }
+.menu-toggle { display: none; background: none; border: 1px solid var(--line); border-radius: 6px; padding: .4rem .9rem; font: inherit; color: var(--ink); }
+
+/* SECTIONS */
+section { padding: 4.5rem clamp(1rem, 5vw, 4rem); max-width: 68rem; margin: 0 auto; }
+.small, .meta, .note { color: var(--muted); font-size: .95rem; margin: 0 0 .8rem; }
+.lead { font-size: 1.2rem; margin-bottom: 1.6rem; }
+
+/* HOME */
+.hero { display: grid; grid-template-columns: 1.6fr 1fr; gap: 3rem; align-items: center; min-height: 80vh; }
+.photo { width: 100%; max-width: 20rem; aspect-ratio: 1; border-radius: 50%; object-fit: cover; justify-self: center; }
+.placeholder { display: grid; place-items: center; border: 2px dashed var(--line); background: var(--mist); color: var(--muted); }
+.button {
+  display: inline-block; padding: .7rem 1.4rem; margin: 0 .6rem .6rem 0; border-radius: 6px;
+  background: var(--accent); color: #fff; text-decoration: none; border: 1px solid var(--accent);
+}
+.button:hover { background: #335b5f; }
+.button.ghost { background: transparent; color: var(--accent); }
+.button.ghost:hover { background: var(--mist); }
+
+/* SKILLS: styled like rows in a server rack, with one LED dot per level */
+.rack { list-style: none; padding: 0; margin: 1.5rem 0 0; max-width: 36rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.rack li { display: grid; grid-template-columns: 1fr auto 6.5rem; gap: 1rem; align-items: center; padding: .9rem 1.2rem; }
+.rack li + li { border-top: 1px solid var(--line); }
+.level { display: flex; gap: .35rem; }
+.level i { width: .7rem; height: .7rem; border-radius: 50%; background: var(--mist); border: 1px solid var(--line); }
+.level i.on { background: var(--accent); border-color: var(--accent); }
+.label { color: var(--muted); font-size: .9rem; text-align: right; }
+
+/* PROJECTS */
+.project { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: center; margin-top: 2.5rem; }
+.project img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); }
+.todo { background: var(--mist); padding: .6rem .9rem; border-radius: 6px; font-size: .95rem; }
+
+footer { text-align: center; padding: 2rem 1rem; color: var(--muted); border-top: 1px solid var(--line); }
+
+/* PHONES AND SMALL SCREENS */
+@media (max-width: 760px) {
+  .menu-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: .5rem 1rem 1rem; flex-direction: column; }
+  .nav-links.open { display: flex; }
+  .nav-links a { margin: 0; padding: .7rem 0; }
+  .hero, .project { grid-template-columns: 1fr; }
+  .hero { min-height: auto; gap: 2rem; }
+  .photo { order: -1; max-width: 12rem; justify-self: start; }
+  .rack li { grid-template-columns: 1fr auto; }
+  .label { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

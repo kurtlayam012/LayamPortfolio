@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kurt F. Layam | BSIT Student Portfolio</title>
+  <meta name="description" content="Portfolio of Kurt F. Layam, a BSIT student interested in hardware, networking, and web design.">
+  <!-- Fonts: if they fail to load, the fallback fonts in style.css are used -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION: href="#about" jumps to the element with id="about" on this page -->
+  <header class="site-header">
+    <a class="brand" href="#home">Kurt Layam</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav id="nav-links" class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="small">BSIT student, Cebu Eastern College</p>
+        <h1>Kurt F. Layam</h1>
+        <p class="lead">I am a fourth-year Information Technology student who enjoys building the machines behind the software: servers, computer setups, and networks. I also design websites and write programs.</p>
+        <a class="button" href="#projects">See my projects</a>
+        <a class="button ghost" href="#contact">Get in touch</a>
+      </div>
+      <!-- PROFILE PHOTO PLACEHOLDER: replace this div with -->
+           <img src="images/kurt-profile-cozy.png" alt="Photo of Kurt Layam" class="photo"> 
+      <!--<div class="photo placeholder" role="img" aria-label="Profile photo placeholder"> -->
+        <span>Photo coming soon</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About me</h2>
+      <p>I am currently studying at Cebu Eastern College, pursuing a Bachelor of Science in Information Technology (4th year, Section 8).</p>
+      <p>My strongest interest is hardware. I like building servers, setting up computers, and working with networking. I also enjoy web design and can do some programming, but I am more comfortable with hardware and design than with writing code.</p>
+    </section>
+
+    <!-- SKILLS: dots show my current level honestly (filled = more comfortable) -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <p class="note">An honest view of where I am right now.</p>
+      <ul class="rack">
+        <li><span class="skill">Computer building and setup</span><span class="level" data-level="4" aria-label="Level: comfortable"></span><span class="label">Comfortable</span></li>
+        <li><span class="skill">Server building</span><span class="level" data-level="3" aria-label="Level: comfortable"></span><span class="label">Comfortable</span></li>
+        <li><span class="skill">Networking</span><span class="level" data-level="3" aria-label="Level: comfortable"></span><span class="label">Comfortable</span></li>
+        <li><span class="skill">Web design</span><span class="level" data-level="3" aria-label="Level: comfortable"></span><span class="label">Comfortable</span></li>
+        <li><span class="skill">Programming</span><span class="level" data-level="2" aria-label="Level: learning"></span><span class="label">Learning</span></li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <img src="images/dungeon-monster-warrior.png" alt="Main menu of Dungeon Monster Warrior with Start, Option, and Exit buttons" loading="lazy">
+        <div>
+          <h3>Dungeon Monster Warrior</h3>
+          <p class="meta">Game development, Godot Engine</p>
+          <p>A 2D dungeon game made in Godot for a game development class. The screenshot shows the main menu with its animated particles and character.</p>
+          <p class="todo"><strong>My contribution:</strong> So My Contribution of this Project is Front end development , Backend development, Sound design</p>
+          <!-- Add a link if you publish the game: <a href="URL">Play or view</a> -->
+        </div>
+      </article>
+
+      <article class="project">
+        <img src="images/rental-wheels.png" alt="Rental Wheels website showing a list of rental cars with prices" loading="lazy">
+        <div>
+          <h3>Rental Wheels</h3>
+          <p class="meta">Car rental system, Django, 3rd year</p>
+          <p>A web-based car rental system built with Django. Users can browse vehicles by type, search by owner, sort by price, and choose pick-up and return dates.</p>
+          <p class="todo"><strong>My contribution:</strong> My Role of this Project is Front end development</p>
+          <!-- Add a link if it is hosted or on GitHub: <a href="URL">View project</a> -->
+        </div>
+      </article>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>I am open to learning opportunities and conversations about IT, hardware, and web design.</p>
+      <p><a class="button" href="mailto:Kurtlayam012@gmail.com">Email me</a>
+      <a class="button ghost" href="https://www.facebook.com/search/top?q=Kurt%20Layam" target="_blank" rel="noopener">Find me on Facebook</a></p>
+      <p class="note">Kurtlayam012@gmail.com</p>
+      <!-- Replace the Facebook link above with your actual profile URL -->
+    </section>
+  </main>
+
+  <footer><p>&copy; <span id="year">2026</span> Kurt F. Layam</p></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
